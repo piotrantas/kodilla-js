@@ -1,14 +1,17 @@
 //papugi i słonie
 
-var text = 'Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.'
-var animal = 'Zielone słonie'
+var text = 'Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.';
+var animal = 'Zielone słonie';
 var animalUpperCased = animal.toUpperCase();
 
-console.log(text, animalUpperCased)
+console.log(text, animalUpperCased);
 
-var textCharsAfter = text.replace('Papugi', animalUpperCased);
+var textToTab = text.split(' '); 
 
-console.log(textCharsAfter)
+textToTab.splice(0, 1, animalUpperCased); 
 
-console.log(textCharsAfter.substr(0, 45))
+var fromTabToString = textToTab.join(' '); 
 
+console.log(fromTabToString);
+
+console.log(fromTabToString.substr(0, fromTabToString.length/2));
